@@ -4,13 +4,13 @@ for _ in range(int(input())):
     a, b = map(int, input().split())
 
     q = deque()
-    visited = [0] * 10000
-    q.append((a, ""))
+    visited = [0] * 10000  # 0 ~ 9999까지 방문 여부
+    q.append((a, ""))  # (현재 숫자, 명령어 기록)
 
     while q:
         num, cmd = q.popleft()
 
-        if num == b:
+        if num == b:  # 목표 숫자 도달하면 출력 후 종료
             print(cmd)
             break
         
